@@ -1,0 +1,19 @@
+.footer{
+  background-color: black;
+  position:fixed;
+  bottom: 0;
+  display: block;
+  justify-content: flex-end;
+  z-index: 1;
+ .img-responsive{
+    display: block;
+    margin: auto;
+  }
+
+}
+
+.footer > span{
+  font-weight: 300;
+  font-size: 1.1rem;
+  color:white;
+}

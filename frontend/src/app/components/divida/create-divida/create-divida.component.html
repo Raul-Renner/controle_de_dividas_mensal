@@ -1,0 +1,34 @@
+<mat-card>
+
+  <h2 mat-dialog-title>Adicionar dívida</h2>
+  <p mat-dialog-description>Adicione uma dívida para o devedor atual</p>
+  <form action="">
+    <mat-form-field>
+      <input  matInput type="number" class="form-control" id="valor" name="valor"
+      placeholder="valor da divida" [(ngModel)]="divida.valor"/>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput type="text" class="form-control" id="descricao"  name="descricao"
+      placeholder="descrição da divida" [(ngModel)]="divida.descricao"
+       />
+    </mat-form-field>
+    <br>
+
+    <mat-form-field class="form-date">
+      <mat-label>Data da dívida</mat-label>
+      <input matInput id="data" name="data"  type="date" [(ngModel)]="divida.data"/>
+
+    </mat-form-field>
+  </form>
+  <div mat-dialog-actions>
+    <button  mat-raised-button color="primary" (click)="cadastrarDivida()">
+      Cadastrar
+    </button>
+    <button  mat-raised-button color="warn" routerLink="/devedor-detalhes/{{id}}">
+      Cancelar
+    </button>
+  </div>
+
+</mat-card>
+

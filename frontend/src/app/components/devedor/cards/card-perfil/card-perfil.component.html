@@ -1,0 +1,13 @@
+<mat-card>
+  <mat-card-title>Detalhes Devedor</mat-card-title>
+  <div class="dados-devedor" *ngIf="devedor">
+    <label>Id: {{devedor.id}}</label>
+    <label>Nome: {{devedor.nome}}</label>
+    <label>Apelido: {{devedor.apelido}}</label>
+    <div>
+        <label id="valorTotal"> Valor da divida:</label>
+          <span>R$ {{devedor.valor_total}}</span>
+    </div>
+  </div>
+
+</mat-card>

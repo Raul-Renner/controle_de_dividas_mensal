@@ -1,0 +1,28 @@
+mat-card{
+  height:auto;
+}
+mat-card-title{
+  font-weight:600;
+  font-size:20px;
+  margin-bottom:10px;
+}
+
+.dados-devedor{
+  display:grid;
+  align-items:column;
+  label{
+    font-size:15px;
+    font-weight:600;
+    margin: 8px;
+  }
+  #valorTotal{
+    font-size:20px;
+  }
+  span{
+    font-size:20px;
+    display: inline-block;
+
+
+
+  }
+}

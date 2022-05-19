@@ -1,0 +1,28 @@
+<mat-sidenav-container class="container">
+      <mat-sidenav mode="side" class="sidenav" opened fixedInViewport="true" fixedTopGap="60">
+          <h4 class="sidenav-title">Menu Opções</h4>
+
+          <mat-nav-list class="nav-list">
+            <a mat-list-item routerLink="/">
+              <i class="material-icons">home</i>
+              Home
+            </a>
+            <a mat-list-item routerLink="/create-devedor">
+              <i class="material-icons">person_add</i>
+              Novo Devedor
+            </a>
+            <a  mat-list-item routerLink="/devedores">
+              <i class="material-icons">groups</i>
+              Devedores
+            </a>
+            <a mat-list-item href="">
+              <i class="material-icons">logout</i>
+              Sair
+            </a>
+          </mat-nav-list>
+      </mat-sidenav>
+      <!-- Body -->
+      <mat-sidenav-content class="content">
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

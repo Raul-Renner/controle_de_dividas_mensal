@@ -1,0 +1,40 @@
+table{
+  width: 100%;
+}
+mat-card{
+  margin-top:20px;
+  margin-bottom: 80px;
+  overflow: auto;
+
+  .mat-header-table-debts{
+    h4{
+      display: inline-block;
+      font-weight:500;
+      font-size:20px;
+    }
+    button{
+      display:block;
+      margin-left: auto;
+    }
+
+  }
+}
+.item-id{
+  min-width: 20px;
+  max-width: 50px;
+}
+.item-valor{
+  min-width: 60px;
+  max-width: 80px;
+}
+th, td{
+  min-width: 130px;
+  max-width: 180px;
+}
+.edit{
+  margin-left: 20px;
+}
+.delete{
+  margin-left: 10px;
+}
+

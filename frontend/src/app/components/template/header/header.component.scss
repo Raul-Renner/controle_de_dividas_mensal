@@ -1,0 +1,27 @@
+.mat-toolbar{
+  background-color: black;
+  height:60px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  .menu-icon{
+    background-color: black;
+    border-color: black;
+    cursor: pointer;
+    .mat-icon{
+      color:white;
+    }
+  }
+  .header-space{
+    flex:1 1 auto;
+  }
+  .profile{
+    background-color: black;
+    border-color: black;
+    cursor: pointer;
+  }
+  .mat-icon{
+    color:white;
+  }
+}
+

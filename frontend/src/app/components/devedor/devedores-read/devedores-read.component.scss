@@ -1,0 +1,16 @@
+table
+{
+  width: 100%;
+  height: auto;
+}
+.item-column{
+  width:50px;
+}
+th, td{
+  min-width: 100px;
+  max-width: 150px;
+}
+
+.delete, .details{
+  margin-left: 15px;
+}

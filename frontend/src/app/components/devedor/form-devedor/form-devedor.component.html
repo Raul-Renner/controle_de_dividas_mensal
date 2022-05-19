@@ -1,0 +1,21 @@
+<mat-card>
+  <mat-card-title>Novo Devedor</mat-card-title>
+
+  <form action="">
+    <mat-form-field>
+      <input matInput type="text" class="form-control" id="nome"  name="nome" placeholder="Nome"
+      [(ngModel)] = "devedor.nome" />
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input  matInput type="text" class="form-control" id="apelido" name="apelido"
+      placeholder="Apelido" [(ngModel)] = "devedor.apelido" />
+    </mat-form-field>
+  </form>
+  <button mat-raised-button color="primary" (click)="createDevedor()">
+    Cadastrar
+  </button>
+  <button mat-raised-button color="warn" routerLink="/devedores">
+    Cancelar
+  </button>
+</mat-card>
