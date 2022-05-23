@@ -4,6 +4,7 @@ import com.casa.contas.projeto_contas.controller.DividaController;
 import com.casa.contas.projeto_contas.model.Devedor;
 import com.casa.contas.projeto_contas.model.Divida;
 import com.casa.contas.projeto_contas.service.DividaService;
+import com.casa.contas.projeto_contas.util.exception.ExceptionMensage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -53,7 +54,7 @@ public class DividaControllerImpl implements DividaController {
 
     @Override
     @GetMapping("/{devedorId}/dividas-devedor")
-    public ResponseEntity<List<Map<String, Object>>> listarDividasDevedor(@PathVariable("devedorId") Integer id) {
+    public ResponseEntity<List<Map<String, Object>>> listarDividasDevedor(@PathVariable("devedorId") Integer id) throws ExceptionMensage {
         List<Map<String, Object>> divida = this.dividaService.buscarDividasDevedor(id);
         System.out.println("ex: "+divida.toString());
         return new ResponseEntity<>(divida, HttpStatus.OK);

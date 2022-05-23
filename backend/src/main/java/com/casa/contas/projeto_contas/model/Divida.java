@@ -24,7 +24,7 @@ public class Divida implements Serializable {
     @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate data;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "devedor_id", referencedColumnName = "devedor_id", nullable = false)
     @JsonIgnore
     private Devedor devedor;

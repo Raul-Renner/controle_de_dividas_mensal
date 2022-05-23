@@ -2,6 +2,7 @@ package com.casa.contas.projeto_contas.service;
 
 import com.casa.contas.projeto_contas.model.Devedor;
 import com.casa.contas.projeto_contas.model.Divida;
+import com.casa.contas.projeto_contas.util.exception.ExceptionMensage;
 
 import java.util.List;
 import java.util.Map;
@@ -10,7 +11,7 @@ public interface DividaService {
  public Divida buscarDividaPorId(Integer devedorId) throws Exception;
 
  // Map<String, Object> buscarDevedor(int id);
-    List<Map<String, Object>> buscarDividasDevedor(Integer id);
+    List<Map<String, Object>> buscarDividasDevedor(Integer id) throws ExceptionMensage;
 
     Divida salvarDivida(Integer id, Divida divida) throws Exception;
     void atualizarDivida(Integer idDevedor, Divida divida) throws Exception;

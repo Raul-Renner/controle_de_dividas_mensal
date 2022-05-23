@@ -3,6 +3,7 @@ package com.casa.contas.projeto_contas.controller.impl;
 import com.casa.contas.projeto_contas.controller.DevedorController;
 import com.casa.contas.projeto_contas.model.Devedor;
 import com.casa.contas.projeto_contas.service.DevedorService;
+import com.casa.contas.projeto_contas.util.exception.ExceptionMensage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -26,8 +27,8 @@ public class DevedorControllerImpl implements DevedorController {
     }
 
     @Override
-    @GetMapping("{devedorId}/devedor-dividas")
-    public ResponseEntity<List<Map<String, Object>>> listarDevedores(@PathVariable("devedorId") Integer id) {
+    @GetMapping("/{devedorId}/devedor-dividas")
+    public ResponseEntity<List<Map<String, Object>>> listarDevedores(@PathVariable("devedorId") Integer id) throws ExceptionMensage {
         List<Map<String, Object>> devedor = this.devedorService.buscarDevedores(id);
         System.out.println(devedor.toString());
         return new ResponseEntity<>(devedor, HttpStatus.OK);

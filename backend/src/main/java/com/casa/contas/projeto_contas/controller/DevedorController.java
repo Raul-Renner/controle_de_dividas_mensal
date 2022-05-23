@@ -1,6 +1,7 @@
 package com.casa.contas.projeto_contas.controller;
 
 import com.casa.contas.projeto_contas.model.Devedor;
+import com.casa.contas.projeto_contas.util.exception.ExceptionMensage;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.http.ResponseEntity;
 
@@ -14,7 +15,7 @@ public interface DevedorController {
 
     @ApiOperation(value = "Lista de todos os devedores",
     notes = "Este método é responsavel por listar todos os devedores do sistema")
-    ResponseEntity<List<Map<String, Object>>> listarDevedores(Integer id);
+    ResponseEntity<List<Map<String, Object>>> listarDevedores(Integer id) throws ExceptionMensage;
 
     @ApiOperation(value = "Excluir um devedor",
     notes = "Este método é responsável por remover um usuário")

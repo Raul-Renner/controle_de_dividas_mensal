@@ -2,6 +2,7 @@ package com.casa.contas.projeto_contas.controller;
 
 import com.casa.contas.projeto_contas.model.Devedor;
 import com.casa.contas.projeto_contas.model.Divida;
+import com.casa.contas.projeto_contas.util.exception.ExceptionMensage;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.http.ResponseEntity;
 
@@ -16,7 +17,7 @@ public interface DividaController {
 
     @ApiOperation(value = "Lista de dividas de um devedor",
             notes = "Este método é responsavel por listar todos as dividas de um devedor do sistema")
-    ResponseEntity<List<Map<String, Object>>> listarDividasDevedor(Integer id);
+    ResponseEntity<List<Map<String, Object>>> listarDividasDevedor(Integer id) throws ExceptionMensage;
 
     @ApiOperation(value = "Excluir um Divida",
             notes = "Este método é responsável por excluir  uma divida")
